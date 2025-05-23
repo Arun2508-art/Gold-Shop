@@ -1,6 +1,7 @@
 'use client';
 
 import { IconGiftFilled } from '@tabler/icons-react';
+import Container from './Container';
 
 export default function ServiceBox() {
   const services = [
@@ -27,8 +28,8 @@ export default function ServiceBox() {
   ];
 
   return (
-    <section className='py-8 bg-neutral-100'>
-      <div className='px-8 2xl:px-0 grid grid-cols-2 md:grid-cols-4 gap-6 justify-center'>
+    <Container className='py-8 bg-neutral-100'>
+      <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
         {services.map((service, index) => (
           <div
             key={index}
@@ -47,6 +48,6 @@ export default function ServiceBox() {
           </div>
         ))}
       </div>
-    </section>
+    </Container>
   );
 }

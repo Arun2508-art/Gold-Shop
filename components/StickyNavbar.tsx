@@ -1,9 +1,10 @@
-'use client'; // if you're using Next.js 13+
+'use client';
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import Container from './Container';
 
-const StickyNav = () => {
+const StickyNavbar = () => {
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
@@ -35,18 +36,22 @@ const StickyNav = () => {
   };
 
   return (
-    <nav
-      className={`h-[50px] hidden lg:flex items-center justify-center gap-8 text-[15px] font-bold py-2.5 transition-all duration-1000 ease-out w-full ${
-        isSticky ? 'fixed top-0 z-50 bg-white shadow-md animate-fadeInDown' : ''
-      }`}
-    >
-      <StyleLink href='/'>HOME</StyleLink>
-      <StyleLink href='/gemstone'>GEMSTONE</StyleLink>
-      <StyleLink href='/diamond'>DIAMOND</StyleLink>
-      <StyleLink href='/gold'>GOLD</StyleLink>
-      <StyleLink href='/more'>MORE</StyleLink>
-    </nav>
+    <Container className='py-2.5'>
+      <nav
+        className={`h-[50px] hidden lg:flex items-center justify-center gap-8 text-[15px] font-bold transition-all duration-1000 ease-out w-full ${
+          isSticky
+            ? 'fixed top-0 z-50 bg-white shadow-md animate-fadeInDown'
+            : ''
+        }`}
+      >
+        <StyleLink href='/'>HOME</StyleLink>
+        <StyleLink href='/gemstone'>GEMSTONE</StyleLink>
+        <StyleLink href='/diamond'>DIAMOND</StyleLink>
+        <StyleLink href='/gold'>GOLD</StyleLink>
+        <StyleLink href='/more'>MORE</StyleLink>
+      </nav>
+    </Container>
   );
 };
 
-export default StickyNav;
+export default StickyNavbar;

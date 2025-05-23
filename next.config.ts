@@ -11,6 +11,11 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'fakestoreapi.com'
+      },
+
+      {
+        protocol: 'https',
+        hostname: 'opencart.mahardhi.com'
       }
     ]
   }

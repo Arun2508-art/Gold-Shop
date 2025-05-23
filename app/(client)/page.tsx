@@ -1,5 +1,6 @@
 'use client';
 import BannerSection from '@/components/BannerSection';
+import Container from '@/components/Container';
 import ProductList from '@/components/ProductList';
 import ServiceBox from '@/components/ServiceBox';
 import Silder from '@/components/Silder';
@@ -31,10 +32,10 @@ const HomePage = () => {
       <Silder />
       <ServiceBox />
       <BannerSection />
-      <div className='mt-12 px-4 2xl:px-0'>
+      <Container className='mt-12 2xl:px-0'>
         <h1 className='text-4xl font-normal text-center'>Products</h1>
         <ProductList products={products} />
-      </div>
+      </Container>
     </div>
   );
 };

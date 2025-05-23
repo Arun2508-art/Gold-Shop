@@ -7,10 +7,11 @@ import {
 } from '@tabler/icons-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import Container from './Container';
 
 const Footer = () => {
   return (
-    <div className='py-8 px-4 md:px-8 lg:px-16 xl:32 2xl:px-64 bg-black text-white text-sm mt-24'>
+    <Container className='py-8 bg-black text-white text-sm mt-24'>
       {/* TOP */}
       <div className='flex flex-col md:flex-row justify-between gap-24'>
         {/* LEFT */}
@@ -132,7 +133,7 @@ const Footer = () => {
       <div className='flex flex-col md:flex-row items-center justify-center gap-8 mt-8 border-t border-gray-600 pt-2'>
         <div className=''>© 2025 Jewels Shop</div>
       </div>
-    </div>
+    </Container>
   );
 };
 

@@ -2,10 +2,11 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
+import Container from './Container';
 
 export default function BannerSection() {
   return (
-    <section className='mt-10 px-4 2xl:px-0'>
+    <Container className='mt-10 2xl:px-0'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
         {/* Banner 1 */}
         <div className='relative rounded-md'>
@@ -47,6 +48,6 @@ export default function BannerSection() {
           </div>
         </div>
       </div>
-    </section>
+    </Container>
   );
 }
