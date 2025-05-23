@@ -1,6 +1,12 @@
+import { ProductProps } from '@/app/(client)/page';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
+export interface ProductState {
+  products: ProductProps[];
+  isLoading?: boolean;
+}
+
+const initialState: ProductState = {
   products: [],
   isLoading: false
 };

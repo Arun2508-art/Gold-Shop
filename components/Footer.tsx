@@ -2,8 +2,6 @@ import {
   IconBrandFacebookFilled,
   IconBrandInstagramFilled,
   IconBrandPinterestFilled,
-  IconBrandTwitterFilled,
-  IconBrandWhatsappFilled,
   IconBrandXFilled,
   IconBrandYoutubeFilled
 } from '@tabler/icons-react';
@@ -54,7 +52,7 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <div className='flex flex-col gap-3'>
+          <div className='flex flex-col gap-3 text-base'>
             <h1 className='font-medium text-lg mb-2'>SHOP</h1>
             <div className='flex flex-col gap-3 text-base'>
               <Link href='' className='hover:text-primary'>
@@ -71,66 +69,6 @@ const Footer = () => {
               </Link>
               <Link href='' className='hover:text-primary'>
                 All Products
-              </Link>
-            </div>
-          </div>
-          <div className='flex flex-col gap-3'>
-            <h1 className='font-medium text-lg uppercase mb-2'>find us on</h1>
-            <div className='flex flex-col gap-3 text-base'>
-              <Link
-                href=''
-                className='flex gap-2 items-center hover:text-primary'
-              >
-                <IconBrandFacebookFilled
-                  width={14}
-                  height={14}
-                  color='#a8741a'
-                />
-                Facebook
-              </Link>
-              <Link
-                href=''
-                className='flex gap-2 items-center hover:text-primary'
-              >
-                <IconBrandTwitterFilled
-                  width={14}
-                  height={14}
-                  color='#a8741a'
-                />
-                Twitter
-              </Link>
-              <Link
-                href=''
-                className='flex gap-2 items-center hover:text-primary'
-              >
-                <IconBrandYoutubeFilled
-                  width={14}
-                  height={14}
-                  color='#a8741a'
-                />
-                Youtube
-              </Link>
-              <Link
-                href=''
-                className='flex gap-2 items-center hover:text-primary'
-              >
-                <IconBrandWhatsappFilled
-                  width={14}
-                  height={14}
-                  color='#a8741a'
-                />
-                Whatsapp
-              </Link>
-              <Link
-                href=''
-                className='flex gap-2 items-center hover:text-primary'
-              >
-                <IconBrandInstagramFilled
-                  width={14}
-                  height={14}
-                  color='#a8741a'
-                />
-                Instagram
               </Link>
             </div>
           </div>

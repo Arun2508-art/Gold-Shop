@@ -1,8 +1,9 @@
+import { ProductState } from '@/store/slices/productSlice';
 import { IconHeart, IconShoppingBag } from '@tabler/icons-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const ProductList = ({ products }) => {
+const ProductList = ({ products }: ProductState) => {
   return (
     <div className='mt-12 flex gap-4 flex-wrap'>
       {products.slice(0, 8).map((item) => (
@@ -13,15 +14,13 @@ const ProductList = ({ products }) => {
         >
           {/* Image Section */}
           <div className='relative w-full h-48'>
-            <div className='absolute inset-0'>
-              <Image
-                src='/images/chain.jpg'
-                alt={item.title}
-                fill
-                sizes='25vw'
-                className='rounded-md object-contain transition-transform hover:scale-110 duration-700'
-              />
-            </div>
+            <Image
+              src='/images/chain.jpg'
+              alt={item.title}
+              fill
+              sizes='25vw'
+              className='rounded-md object-contain transition-transform hover:scale-110 duration-700 p-4'
+            />
 
             {/* Wishlist Icon - Top Right */}
             <button
@@ -40,12 +39,14 @@ const ProductList = ({ products }) => {
           {/* Main Content Section - Vertically Centered */}
           <div className='flex flex-col items-center gap-2 p-4 flex-grow justify-between mb-1'>
             <h3 className='line-clamp-2 text-sm text-center'>{item.title}</h3>
-            <div className='font-semibold text-sm'>
-              {new Intl.NumberFormat('en-US', {
-                style: 'currency',
-                currency: 'USD'
-              }).format(item.price)}
-            </div>
+            {item.price && (
+              <div className='font-semibold text-sm'>
+                {new Intl.NumberFormat('en-US', {
+                  style: 'currency',
+                  currency: 'USD'
+                }).format(item.price)}
+              </div>
+            )}
           </div>
 
           {/* Button Container - Aligned to the Bottom */}
